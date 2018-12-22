@@ -316,6 +316,8 @@ set(CMAKE_RANLIB ranlib CACHE FILEPATH "" FORCE)
 # required as of cmake 2.8.10.
 set(CMAKE_OSX_DEPLOYMENT_TARGET "" CACHE STRING
   "Must be empty for iOS builds." FORCE)
+# 设置Xcode里的iOS Deployment Target选项。不设置这个的话，Xcode不显示低版本模拟器。
+set(CMAKE_OSX_DEPLOYMENT_TARGET ${IOS_DEPLOYMENT_TARGET})
 # Set the architectures for which to build.
 set(CMAKE_OSX_ARCHITECTURES ${IOS_ARCH} CACHE STRING "Build architecture for iOS")
 # Change the type of target generated for try_compile() so it'll work when cross-compiling
