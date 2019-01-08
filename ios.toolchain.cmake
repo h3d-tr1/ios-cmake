@@ -250,9 +250,8 @@ if (NOT DEFINED ENABLE_ARC)
 endif()
 # Use hidden visibility or not
 if (NOT DEFINED ENABLE_VISIBILITY)
-  # Unless specified, disable symbols visibility by default
-  set(ENABLE_VISIBILITY FALSE CACHE BOOL "Whether or not to hide symbols (-fvisibility=hidden)")
-  message(STATUS "Hiding symbols visibility by default. ENABLE_VISIBILITY not provided!")
+  # 默认导出所有函数。
+  set(ENABLE_VISIBILITY TRUE CACHE BOOL "Whether or not to hide symbols (-fvisibility=hidden)")
 endif()
 # Get the SDK version information.
 execute_process(COMMAND xcodebuild -sdk ${CMAKE_OSX_SYSROOT} -version SDKVersion
