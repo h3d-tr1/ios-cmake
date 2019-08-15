@@ -200,7 +200,7 @@ if(NOT DEFINED PLATFORM)
     endif()
   endif()
   if (NOT PLATFORM)
-    set(PLATFORM "OS")
+    set(PLATFORM "OS64")
   endif()
 endif()
 
